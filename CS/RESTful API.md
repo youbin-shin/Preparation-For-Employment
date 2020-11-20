@@ -38,6 +38,8 @@ Representational State Transfer API
 
 \- 각 요청에 대한 컨텍스트가 서버에 저장되어서는 안된다. REST는 Resource 중심이기 때문에 서버는 API를  통해 동작을 이해 하고 Resource에 접근할 수  있다. API를 작성하는 방법에 대해서는 아래에서 다룰 것이다.   Client는 서버에게 자신을 표현(?) 할 수있는 별도의 정보를 전달해야 한다.(API key or Token 정보)
 
+
+
 **3. 캐시 처리 가능(Cacheable)**
 
 \- www에서와 같이 클라이언트는 응답을 캐싱할 수 있어야 한다. 캐싱처리가 잘되면 클리이언트 - 서버 간  상호작용을 부분적, 완전하게 제거하여 scalability와 성능을 향상시킨다. 
@@ -66,13 +68,13 @@ Representational State Transfer API
 
 **1. 동사형 보다는 명사형을 추구하라.**
 
-\- ex) /getCompany/mocam (x)
+\- ex) /getUser (x)
 
 
 
 **2.명사의 단수형 보다는 복수형을 추구하라.**
 
-\- ex) /companies/mocam (o)
+\- ex) /users/mypage (o)
 
 
 
@@ -82,15 +84,9 @@ Representational State Transfer API
 
 \- API를 보고 동작을 이해할 수 있게 작성
 
-\- ex) /companies/mocam  <= 사실 작성자 말고(명사형이라 더 힘들다)는 이해하기 힘들꺼 같다.
-
-\- 서브 URL을 이용하는 방법  <= 이부분에 대해서는 잘 모르겠으니 [여기](https://www.slideshare.net/Byungwook/rest-api-60505484)를 참고하세요 
-
 
 
 **4. HTTP 응답코드**
-
-\- 사실 각 유명한 회사마다 사용하는 응답코드에는 차이가 조금씩 있다고 합니다.
 
 \- 권장하는 기본 Response Code 입니다. 
 
@@ -116,11 +112,7 @@ Representational State Transfer API
 
 
 
-
-
 **6. 부분 응답(partial Response)**
-
-\- 이 부분도 추가적인 공부가 필요하다.. 잘 모르겠다ㅜ.ㅜ
 
 \- 검색 HTTP GET에 쿼리스트링을 이용한다.
 
@@ -130,9 +122,7 @@ Representational State Transfer API
 
 예를 들어 페이징처리 외에도 자바스크립트 소스나, 이후 발생할 url 링크등을 함께 투척하는 경우를 말한다.
 
-
-
-
+---
 
 - REST는 기본적으로 웹의 기존 기술과 HTTP 프로토콜을 그대로 활용하기 때문에 웹의 장점을 최대한 활용할 수 있는 아키텍처 스타일이다.
   REST는 네트워크 상에서 Client와 Server 사이의 통신 방식 중 하나이다.
